@@ -3,7 +3,7 @@
 
 int ModuleInterface::Init(paf::View* view)
 {
-	stdc::printf("ModuleInterface::Init()\nview: 0x%p\n", view);
+	vsh::printf("ModuleInterface::Init()\nview: 0x%p\n", view);
 
 	g_ModuleView = view;
 
@@ -14,25 +14,25 @@ int ModuleInterface::Init(paf::View* view)
 
 int ModuleInterface::Start(paf::View* view)
 {
-	stdc::printf("ModuleInterface::Start()\nview: 0x%p\n", view);
+    vsh::printf("ModuleInterface::Start()\nview: 0x%p\n", view);
 	return 0;
 }
 
 int ModuleInterface::Stop()
 {
-	stdc::puts("ModuleInterface::Stop()");
+    vsh::puts("ModuleInterface::Stop()");
 	return 0;
 }
 
 int ModuleInterface::Exit()
 {
-	stdc::puts("ModuleInterface::Exit()");
+    vsh::puts("ModuleInterface::Exit()");
 	return 0;
 }
 
 
 int ActionInterface::ActionHandler(char const* action)
 {
-	stdc::printf("ActionInterface::ActionHandler()\naction: %s\n", action);
+    vsh::printf("ActionInterface::ActionHandler()\naction: %s\n", action);
 	return 0;
 }

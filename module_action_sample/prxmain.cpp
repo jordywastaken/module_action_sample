@@ -6,7 +6,7 @@ extern "C"
 {
 	int __cdecl module_start(size_t args, const void *argp)
 	{
-		stdc::puts("module_start()");
+		vsh::puts("module_start()");
 
 		g_Module = *(paf::Module**)argp;
 		g_Module->SetInterface(1, &g_ModuleInterface);
@@ -16,7 +16,7 @@ extern "C"
 
 	int __cdecl module_stop(size_t args, const void *argp)
 	{
-		stdc::puts("module_stop()");
+		vsh::puts("module_stop()");
 		return 0;
 	}
 }
